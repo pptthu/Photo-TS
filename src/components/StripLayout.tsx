@@ -1,0 +1,36 @@
+import React from 'react';
+import { ASSETS } from '../configs/app.constants';
+import type { IPhoto } from '../types/index';
+
+interface StripLayoutProps {
+  photos: IPhoto[];
+}
+
+const StripLayout: React.FC<StripLayoutProps> = ({ photos }) => {
+  return (
+    <div className="w-strip flex flex-col gap-2 bg-white p-2 shadow-sm border-2 border-dashed border-gray-300 relative flex-shrink-0">
+      <div className="text-center pb-1 relative z-[50] pointer-events-none">
+        <img src={ASSETS.LOGO} alt="logo" className="w-8 mx-auto opacity-70" style={{ width: '32px' }} />
+      </div>
+
+      {photos.map((photoObj, idx) => (
+        <div key={photoObj.id || idx} className="aspect-[4/3] bg-gray-100 overflow-hidden relative z-[10]">
+          <img
+            src={photoObj.src} 
+            className="w-full h-full object-cover grayscale-[10%]"
+            alt="strip"
+            style={{ 
+                transform: photoObj.source === 'camera' ? 'scaleX(-1)' : 'none' 
+            }}
+          />
+        </div>
+      ))}
+
+      <div className="text-center pt-2 pb-1 relative z-[50] pointer-events-none">
+        <p className="text-[9px] font-bold text-gray-400 font-sans tracking-wide">by @pptthuu</p>
+      </div>
+    </div>
+  );
+};
+
+export default StripLayout;

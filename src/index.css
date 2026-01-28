@@ -1,0 +1,34 @@
+/* 1. IMPORT FONTS TỪ GOOGLE  */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&family=Patrick+Hand&display=swap');
+
+/* 2. KHỞI TẠO TAILWIND */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 3. CẤU HÌNH MẶC ĐỊNH */
+@layer base {
+  body {
+    /* Mặc định xóa margin/padding và dùng font Nunito */
+    @apply m-0 p-0 overflow-hidden bg-gray-100 font-sans;
+  }
+}
+
+/* 4. CÁC CLASS TIỆN ÍCH RIÊNG (Utility) */
+@layer utilities {
+  .text-outline {
+    -webkit-text-stroke: 1px white;
+  }
+  
+  /* Tùy chỉnh thanh cuộn  */
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 6px;
+  }
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 183, 197, 0.5); 
+    border-radius: 20px;
+  }
+}
