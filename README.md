@@ -7,23 +7,21 @@
 
 ## 🌐 Demo Trực Tuyến
 
-👉 **Link:** https://photo-ts.vercel.app/
+👉 **Link:** [https://photo-ts.vercel.app/](https://photo-ts.vercel.app/)
 
 ---
 
-
 ### ✨ Các cải tiến chính (Key Improvements)
 
-
-  **Kiến trúc Clean Architecture:**
+* **Kiến trúc Clean Architecture:**
     * Tách biệt rõ ràng giữa **Giao diện (Views)**, **Logic (Hooks/Store)** và **Dữ liệu (Types/Configs)**.
     * Dễ dàng bảo trì và mở rộng tính năng mới mà không ảnh hưởng đến code cũ.
 
-  **Quản lý State hiện đại với Zustand:**
+* **Quản lý State hiện đại với Zustand:**
     * Thay thế việc truyền Props chồng chéo (Prop Drilling) bằng Store tập trung.
-    * Quản lý luồng dữ liệu (Flow): `Home -> Mode -> Camera -> Frame -> Decor` .
+    * Quản lý luồng dữ liệu (Flow): `Home` -> `Mode` -> `Camera` -> `Frame` -> `Decor`.
 
-  **Tối ưu hóa UI/UX:**
+* **Tối ưu hóa UI/UX:**
     * Sử dụng **TailwindCSS** với bảng màu (Theme) được cấu hình tập trung.
     * Tối ưu hóa tài nguyên hình ảnh (Assets) và hiệu ứng động.
 
@@ -80,9 +78,8 @@ src/
 ├── vite-env.d.ts               # Định nghĩa kiểu cho Vite
 └── declarations.d.ts           # Fix lỗi thư viện thiếu type (react-draggable)
 
-
+```
 ## 🚀 Hướng dẫn cài đặt (Installation)
-
 Để chạy dự án này trên máy cục bộ (Localhost), hãy làm theo các bước sau:
 
 **Bước 1: Clone dự án về máy**
@@ -90,14 +87,16 @@ src/
 Mở Terminal và chạy lệnh sau để tải source code về:
 
 ```bash
-git clone [https://github.com/ppttthu/Photo-TS.git](https://github.com/ppttthu/Photo-TS.git)
+git clone https://github.com/ppttthu/Photo-TS.git
 cd Photo-TS
 ```
-**Bước 2: Cài đặt các gói thư viện**
+
+**Bước 2: Cài đặt thư viện**
 ```bash
 npm install
 ```
-**Bước 3: Chạy môi trường phát triển**
+
+**Bước 3: Chạy môi trường**
 ```bash
 npm run dev
 ```
